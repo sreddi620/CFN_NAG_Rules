@@ -18,4 +18,8 @@ class ElasticIPNotAllowedRule < BooleanBaseRule
   def resource_type
     'AWS::EC2::EIP' || 'AWS::EC2::EIPAssociation'
   end
+
+  def boolean_property
+    :EIP
+  end
 end
