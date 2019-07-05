@@ -1,7 +1,7 @@
 require 'cfn-nag/violation'
-require_relative 'base'
+require_relative 'boolean_base_rule'
 
-class ElasticIPNotAllowedRule < BaseRule
+class ElasticIPNotAllowedRule < BooleanBaseRule
 
   def rule_text
     'Elastic IP should not be assigned'
