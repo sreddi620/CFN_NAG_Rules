@@ -1,2 +1,4 @@
-WU_VIOLATION_2
-WU_VIOLATION_5
+---
+RulesToSuppress:
+- id: WU_VIOLATION_2
+- id: WU_VIOLATION_5
