@@ -11,3 +11,4 @@ WU2
 WU3
 WU4
 WU5
+WU6
