@@ -1,4 +1,4 @@
 ---
 RulesToSuppress:
-- id: WU_VIOLATION_2
-- id: WU_VIOLATION_5
+- id: WU2
+- id: WU5
