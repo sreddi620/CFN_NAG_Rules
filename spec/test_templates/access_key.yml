@@ -1,0 +1,5 @@
+Resources:
+  AccessKey:
+    Type: AWS::IAM::AccessKey
+    Properties:
+      UserName: jimbob

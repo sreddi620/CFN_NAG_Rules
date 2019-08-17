@@ -1,0 +1,75 @@
+{
+  "Resources": {
+    "sgIngress34": {
+      "Type" : "AWS::EC2::SecurityGroup",
+      "Properties" : {
+        "GroupDescription" : "some_group_desc",
+        "SecurityGroupIngress" : {
+          "CidrIp": "1.2.3.4",
+          "FromPort": 34,
+          "ToPort": 34,
+          "IpProtocol": "tcp"
+        },
+        "VpcId" : "vpc-9f8e9dfa"
+      }
+    },
+
+    "sgIngress22": {
+      "Type" : "AWS::EC2::SecurityGroup",
+      "Properties" : {
+        "GroupDescription" : "some_group_desc",
+        "SecurityGroupIngress" : {
+          "CidrIp": "1.2.3.4",
+          "FromPort": 22,
+          "ToPort": 22,
+          "IpProtocol": "tcp"
+        },
+        "VpcId" : "vpc-9f8e9dfa"
+      }
+    },
+
+    "anotherSg": {
+      "Type" : "AWS::EC2::SecurityGroup",
+      "Properties" : {
+        "GroupDescription" : "some_group_desc",
+        "VpcId" : "vpc-9f8e9dfa"
+      }
+    },
+
+    "ingress81" : {
+      "Type" : "AWS::EC2::SecurityGroupIngress",
+      "Properties" : {
+        "GroupId": {
+          "Ref": "anotherSg"
+        },
+        "CidrIp" : "1.2.3.45",
+        "FromPort" : 81,
+        "ToPort" : 81,
+        "IpProtocol" : "tcp"
+      }
+    },
+
+    "ingress3389" : {
+      "Type" : "AWS::EC2::SecurityGroupIngress",
+      "Properties" : {
+        "GroupId": {
+          "Ref": "anotherSg"
+        },
+        "CidrIp" : "1.2.3.45",
+        "FromPort" : 3389,
+        "ToPort" : "3389",
+        "IpProtocol" : "tcp"
+      }
+    },
+    "ingress22-2" : {
+      "Type" : "AWS::EC2::SecurityGroupIngress",
+      "Properties" : {
+        "GroupId": "sg-1234",
+        "CidrIp" : "1.2.3.45",
+        "FromPort" : "21",
+        "ToPort" : 22,
+        "IpProtocol" : "tcp"
+      }
+    }
+  }
+}
